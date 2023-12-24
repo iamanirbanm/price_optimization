@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<body>
+    <h1>Price Optimizer</h1>
+    <br>
+    
+    <form id="registerform" action="/submit" method="post">
+        <label for="firstname">Enter your First name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+        <br>
+        <label for="lastname">Enter your Last Name</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+        <br>
+        <label for="storename">Enter name of your store</label>
+        <input type="text" id="storename" name="storename" placeholder="Store name" required>
+        <br>
+        <!--Username-->
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <br>
+        <!--Password-->
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <br>
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <br>
+        <!--Submit-->
+        <button type="submit" value="submit">
+    </form>
+</body>
+</html>

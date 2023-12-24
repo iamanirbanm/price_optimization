@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+</head>
+<body>
+    <h1>Price Optimizer</h1>
+    <br>
+    
+    <form action="/submit" method="post">
+         <!-- Dropdown List -->
+         <label for="usertype">User Type</label>
+         <select id="userype" name="usertype">
+             <option value="usa">Buyer</option>
+             <option value="canada">Seller</option>
+         </select>
+        <br>
+        <!--Username-->
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <br>
+        <!--Password-->
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <br>
+        <!--Submit-->
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

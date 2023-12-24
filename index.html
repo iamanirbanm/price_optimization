@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Pricing Application</title>
+    <link rel="stylesheet" href="D:\price_optimization\style.css">
+</head>
+<body>
+    <header>
+        <h1>Dynamic Pricing Application</h1>
+    </header>
+    <main>
+        <section id="pricing-form">
+            <h2>Know Dynamic Prices</h2>
+   
+            <form action="submit" method="post">
+                <!-- Add input fields for relevant pricing parameters -->
+                <label for="product_name">Product Name:</label>
+                <input type="text" id="product_name" name="product_name" required>
+                
+                <label for="base_price">Base Price:</label>
+                <input type="number" id="base_price" name="base_price" required>
+
+                <label for="profit_margin">Profit Margin:</label>
+                <input type="number" id="profit_margin" name="profit_margin" required>
+
+                <label for="csvFile">Choose a CSV file with product history:</label>
+                <input type="file" id="csvFile" name="csvFile" accept=".csv" required>
+                
+                <button type="submit">Update Prices</button>
+            </form>
+        </section>
+
+        <section id="pricing-list">
+            <h2>Current Pricing</h2>
+            <ul>
+                <li>Product: Apple | Base Price: Rs 150 | Updated Price: Rs 175</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Dynamic Pricing Application</p>
+    </footer>
+</body>
+</html>
