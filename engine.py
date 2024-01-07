@@ -22,6 +22,7 @@ def getPrices():
         csv_file = request.files.get('csvFile')
 
         data = pd.read_csv(csv_file,parse_dates=['date'])
+        data.columns=['date','sales','inventory']
         data = data.dropna()
         data['date'] = data.date.dt.to_period('D')
         data = data.set_index(['date']).sort_index()
@@ -30,6 +31,11 @@ def getPrices():
 
         dates = [str(date) for date in values.index]
         train = values.values
+
+        inventory = [data['inventory'].iloc[0]]
+        for i in range(1,len(data)):
+            inventory.append(data['inventory'].iloc[i]-(data['inventory'].iloc[i-1]-data['sales'].iloc[i-1]))
+        data['inventory']=inventory
 
 
         #-------------------------------------Sales------------------------------------
